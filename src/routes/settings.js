@@ -6,6 +6,8 @@ import { List, ListItem } from 'material-ui/List';
 import FontIcon from 'material-ui/FontIcon';
 
 import Next from 'modules/settings/next';
+import Tokens from 'modules/settings/tokens/list';
+import TokensEdit from 'modules/settings/tokens/edit';
 
 const styles = {
 	link: {
@@ -32,6 +34,16 @@ const SettingsMenu = () => (
 				leftIcon={<FontIcon className="material-icons">settings</FontIcon>}
 			/>
 		</NavLink>
+		<NavLink
+			style={styles.link}
+			activeStyle={styles.linkActive}
+			to="/settings/tokens"
+		>
+			<ListItem
+				primaryText={messages.settings_tokens}
+				leftIcon={<FontIcon className="material-icons">vpn_key</FontIcon>}
+			/>
+		</NavLink>
 	</List>
 );
 
@@ -44,6 +56,9 @@ const Settings = ({ match }) => {
 			<div className="col-xs-12 col-sm-8 col-md-9 col--no-gutter scroll col-full-height">
 				<Switch>
 					<Route path="/settings/next" exact component={Next} />
+					<Route path="/settings/tokens" exact component={Tokens} />
+					<Route path="/settings/tokens/add" exact component={TokensEdit} />
+					<Route path="/settings/tokens/:tokenId" component={TokensEdit} />
 				</Switch>
 			</div>
 		</div>
