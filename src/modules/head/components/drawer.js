@@ -32,16 +32,6 @@ const menuItems = [
 		icon: 'person'
 	},
 	{
-		title: messages.settings_pages,
-		url: '/pages',
-		icon: 'description'
-	},
-	{
-		title: messages.files,
-		url: '/files',
-		icon: 'folder'
-	},
-	{
 		title: '-',
 		url: 'settings'
 	},
@@ -49,11 +39,6 @@ const menuItems = [
 		title: messages.drawer_settings,
 		url: '/settings',
 		icon: 'settings'
-	},
-	{
-		title: messages.apps,
-		url: '/apps',
-		icon: 'apps'
 	},
 	{
 		title: messages.drawer_logout,
