@@ -261,6 +261,7 @@
   "optionNew": "New option",
   "optionControl": "Option control",
   "optionControlSelect": "Drop-down list",
+  "optionControlRadio" : "Radio list",
   "optionValues": "Option values",
   "newOptionValue": "New value",
   "deleteProduct": "Delete product",

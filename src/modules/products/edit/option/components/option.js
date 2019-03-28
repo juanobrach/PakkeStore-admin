@@ -82,6 +82,10 @@ class ProductOptionForm extends React.Component {
 											value="select"
 											primaryText={messages.optionControlSelect}
 										/>
+										<MenuItem
+											value="radio"
+											primaryText={messages.optionControlRadio}
+										/>
 									</Field>
 								</div>
 							</div>
