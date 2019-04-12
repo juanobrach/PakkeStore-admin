@@ -34,7 +34,7 @@ class GeneralSettings extends React.Component {
 				<Paper className="paper-box" zDepth={1}>
 					<div className={style.innerBox}>
 						<div className="row between-xs middle-xs">
-							<div className="col-xs-12 col-sm-6">{messages.domain}</div>
+							<div className="col-xs-12 col-sm-6">{messages.next_product}</div>
 							<div className="col-xs-12 col-sm-6">
 								<Field
 									component={TextField}

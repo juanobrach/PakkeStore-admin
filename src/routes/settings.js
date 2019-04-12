@@ -9,6 +9,16 @@ import Next from 'modules/settings/next';
 import Tokens from 'modules/settings/tokens/list';
 import TokensEdit from 'modules/settings/tokens/edit';
 
+import Email from 'modules/settings/email';
+import Smtp from 'modules/settings/smtp';
+import Shipping from 'modules/settings/shipping';
+import ShippingEdit from 'modules/settings/shippingEdit';
+import Payments from 'modules/settings/payments';
+import PaymentsEdit from 'modules/settings/paymentsEdit';
+
+import Checkout from 'modules/settings/checkout';
+import CheckoutFields from 'modules/settings/checkoutFields';
+
 const styles = {
 	link: {
 		color: 'inherit',
@@ -44,6 +54,48 @@ const SettingsMenu = () => (
 				leftIcon={<FontIcon className="material-icons">vpn_key</FontIcon>}
 			/>
 		</NavLink>
+		<NavLink
+			style={styles.link}
+			activeStyle={styles.linkActive}
+			to="/settings/email"
+		>
+			<ListItem
+				primaryText={messages.settings_emails}
+				leftIcon={<FontIcon className="material-icons">email</FontIcon>}
+			/>
+		</NavLink>
+		<NavLink
+			style={styles.link}
+			activeStyle={styles.linkActive}
+			to="/settings/shipping"
+		>
+			<ListItem
+				primaryText={messages.settings_shipping}
+				leftIcon={
+					<FontIcon className="material-icons">local_shipping</FontIcon>
+				}
+			/>
+		</NavLink>
+		<NavLink
+			style={styles.link}
+			activeStyle={styles.linkActive}
+			to="/settings/payments"
+		>
+			<ListItem
+				primaryText={messages.settings_payments}
+				leftIcon={<FontIcon className="material-icons">payment</FontIcon>}
+			/>
+		</NavLink>
+		<NavLink
+			style={styles.link}
+			activeStyle={styles.linkActive}
+			to="/settings/checkout"
+		>
+			<ListItem
+				primaryText={messages.settings_checkout}
+				leftIcon={<FontIcon className="material-icons">shopping_cart</FontIcon>}
+			/>
+		</NavLink>
 	</List>
 );
 
@@ -59,6 +111,19 @@ const Settings = ({ match }) => {
 					<Route path="/settings/tokens" exact component={Tokens} />
 					<Route path="/settings/tokens/add" exact component={TokensEdit} />
 					<Route path="/settings/tokens/:tokenId" component={TokensEdit} />
+					<Route path="/settings/email" exact component={Email} />
+					<Route path="/settings/email/smtp" component={Smtp} />
+					<Route path="/settings/shipping" exact component={Shipping} />
+					<Route path="/settings/shipping/add" exact component={ShippingEdit} />
+					<Route path="/settings/shipping/:methodId" component={ShippingEdit} />
+					<Route path="/settings/payments" exact component={Payments} />
+					<Route path="/settings/payments/add" exact component={PaymentsEdit} />
+					<Route path="/settings/payments/:methodId" component={PaymentsEdit} />
+					<Route path="/settings/checkout" exact component={Checkout} />
+					<Route
+						path="/settings/checkout/fields/:fieldName"
+						component={CheckoutFields}
+					/>
 				</Switch>
 			</div>
 		</div>

@@ -71,6 +71,11 @@ export default class EmailSettings extends React.Component {
 								path="first_name"
 							/>
 							<CheckoutFieldItem
+								name="first_name_2"
+								status={this.getFieldStatus('first_name')}
+								path="first_name_2"
+							/>
+							<CheckoutFieldItem
 								name={messages.last_name}
 								status={this.getFieldStatus('last_name')}
 								path="last_name"
