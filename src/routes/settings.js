@@ -19,6 +19,9 @@ import PaymentsEdit from 'modules/settings/paymentsEdit';
 import Checkout from 'modules/settings/checkout';
 import CheckoutFields from 'modules/settings/checkoutFields';
 
+import General from 'modules/settings/general';
+import GeneralLogo from 'modules/settings/generalLogo';
+
 const styles = {
 	link: {
 		color: 'inherit',
@@ -33,6 +36,17 @@ const styles = {
 
 const SettingsMenu = () => (
 	<List>
+		<NavLink
+			style={styles.link}
+			activeStyle={styles.linkActive}
+			to="/settings"
+			exact={true}
+		>
+			<ListItem
+				primaryText={messages.settings_general}
+				leftIcon={<FontIcon className="material-icons">settings</FontIcon>}
+			/>
+		</NavLink>
 		<NavLink
 			style={styles.link}
 			activeStyle={styles.linkActive}
@@ -107,6 +121,8 @@ const Settings = ({ match }) => {
 			</div>
 			<div className="col-xs-12 col-sm-8 col-md-9 col--no-gutter scroll col-full-height">
 				<Switch>
+					<Route path="/settings" exact component={General} />
+					<Route path="/settings/general/logo" component={GeneralLogo} />
 					<Route path="/settings/next" exact component={Next} />
 					<Route path="/settings/tokens" exact component={Tokens} />
 					<Route path="/settings/tokens/add" exact component={TokensEdit} />
