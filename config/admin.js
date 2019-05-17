@@ -3,6 +3,7 @@ module.exports = {
 	// dashboard UI language
 	language: process.env.LANGUAGE || 'es',
 	apiBaseUrl: process.env.API_BASE_URL || 'http://localhost:3001/api/v1',
-	apiWebSocketUrl: process.env.API_WEB_SOCKET_URL || '', // ws://localhost:3001 (in development)
+	assetsBaseURL: process.env.ASSETS_BASE_URL || 'http://localhost:3001',
+	apiWebSocketUrl: process.env.API_WEB_SOCKET_URL || 'ws://localhost:3001',
 	developerMode: process.env.DEVELOPER_MODE || true
 };
