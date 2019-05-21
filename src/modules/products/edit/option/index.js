@@ -40,6 +40,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 		onSubmit: values => {
 			const { productId, optionId } = ownProps.match.params;
 			dispatch(updateOption(productId, optionId, values));
+			ownProps.history.push(`/product/${productId}`);
 		},
 		createOptionValue: valueName => {
 			const { productId, optionId } = ownProps.match.params;

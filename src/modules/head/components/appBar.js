@@ -51,7 +51,6 @@ export default class AppBarTop extends React.Component {
 			orderNumber
 		} = this.props;
 		const pathname = location.pathname;
-
 		if (pathname === '/login' || pathname === '/logout') {
 			return null;
 		}
@@ -66,7 +65,6 @@ export default class AppBarTop extends React.Component {
 		{
 			/* <IconButton><FontIcon color="#fff" className="material-icons">notifications</FontIcon></IconButton> */
 		}
-
 		if (pathname === '/products') {
 			title = messages.products_title;
 
@@ -160,7 +158,7 @@ export default class AppBarTop extends React.Component {
 			pathname.startsWith('/product/') &&
 			pathname.includes('/option/')
 		) {
-			const productId = pathname.split('/')[3];
+			const productId = pathname.split('/')[2];
 			title = messages.editProductOption;
 			leftButton = (
 				<Link to={`/product/${productId}`}>
