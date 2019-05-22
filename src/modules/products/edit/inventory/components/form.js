@@ -229,6 +229,13 @@ const ProductInventoryForm = ({
 						component={CustomToggle}
 						label={messages.enabled}
 					/>
+					<Divider
+						style={{
+							marginTop: 10,
+							marginBottom: 10
+						}}
+					/>
+					<Field name="is_pack" component={CustomToggle} label="Es pack" />
 				</div>
 				<div
 					className={

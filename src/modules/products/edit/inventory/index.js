@@ -28,7 +28,8 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 					stock_preorder: values.stock_preorder,
 					stock_backorder: values.stock_backorder,
 					discontinued: values.discontinued,
-					enabled: values.enabled
+					enabled: values.enabled,
+					is_pack: values.is_pack
 				})
 			);
 		}
